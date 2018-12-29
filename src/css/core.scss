@@ -1,0 +1,25 @@
+@import 'var.scss';
+
+.#{$tag} {
+  display: inline-flex;
+  padding: $tag-padding;
+  font-size: $tag-font-size;
+  line-height: 1;
+  border: $tag-border-width $tag-border-type $tag-border-color;
+
+  &-radius {
+    border-radius: $tag-border-radius;
+  }
+
+  &-round {
+    border-radius: $tag-border-round;
+  }
+
+  &-sm {
+    padding: $tag-padding-sm;
+  }
+
+  &-lg {
+    padding: $tag-padding-lg;
+  }
+}

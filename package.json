@@ -1,0 +1,18 @@
+{
+  "name": "tag",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "parcel build tag.html",
+    "start": "parcel tag.html --open --no-cache",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "huanranc",
+  "license": "ISC",
+  "dependencies": {
+    "parcel-bundler": "^1.10.3",
+    "posthtml-include": "^1.2.0",
+    "sass": "^1.15.1"
+  }  
+}

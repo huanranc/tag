@@ -1,0 +1,11 @@
+# git rm -r --cached .
+node_modules
+dist/
+
+### Parcel ###
+.cache/
+
+### Node ###
+package-lock.json
+yarn-lock.json
+yarn.lock
