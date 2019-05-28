@@ -70,6 +70,7 @@ class Tag {
     }
   }
 
+  // 失焦
   blur(el) {
     let element = document.querySelector(`input.${el.id}`);
     element.onblur = () => {
