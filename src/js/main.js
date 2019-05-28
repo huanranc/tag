@@ -1,4 +1,6 @@
 class Tag {
+  modalType = {};
+
   constructor(elemet, options = {}) {
     this.elemet = elemet;
     this.options = options;
@@ -20,6 +22,9 @@ class Tag {
     })
   };
 
+  /* 
+  增加标签
+   */
   add(event) {
     if (event) {
       let textBtn = event.id;
@@ -29,16 +34,27 @@ class Tag {
     }
   };
 
+  /* 
+  增加标签的模板
+   */
   teml(event, value) {
     let textBtn = event.id;
     let content = document.querySelector(`.tag-content.${textBtn}`);
-    console.log(1,value, content.dataset.tag);
-    this.modal(content.dataset.tag);
+    let type = content.dataset.tag;
+    let teml;
+    switch(type) {
+      case 'init' : teml = this.modalType.init(value); break;
+    }
+    let tempArr = [];
+    tempArr.push(teml);
+    tempArr.forEach(item => {
+      content.innerHTML += item;
+    });
   }
 
-  modal(type) {
-    switch(type) {
-      case 'init': `<span class="tag" style="margin: 8px;"><span>`;
+ modalType = {
+    init(label) {
+      return `<span class="tag">${label}<span>`;
     }
   }
 
@@ -51,6 +67,13 @@ class Tag {
 
     switch(target.dataset.tag) {
       case 'addBtn': this.add(target);
+    }
+  }
+
+  blur(el) {
+    let element = document.querySelector(`input.${el.id}`);
+    element.onblur = () => {
+      element.value = '';
     }
   }
 }

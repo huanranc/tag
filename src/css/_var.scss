@@ -1,15 +1,18 @@
 //========================
 // var
 $tag: 'tag' !default;
-$tag-padding: 0.375rem !default;
-$tag-padding-sm: 0.1875rem !default;
-$tag-padding-lg: 0.5rem !default;
+$tag-padding: 0.4375rem !default;
+// $tag-padding-sm: 0.1875rem !default;
+// $tag-padding-lg: 0.5rem !default;
+
+$tag-margin: 0 0.5rem 0 0 !default;
 
 $tag-font-size: 12px !default;
+$tag-font-line-height: 20px !default;
 
 $tag-border-width: 1px !default;
 $tag-border-type: solid !default;
 $tag-border-color: #d9d9d9 !default;
 
-$tag-border-radius: 5px !default;
+$tag-border-radius: 8px !default;
 $tag-border-round: 1000px !default;

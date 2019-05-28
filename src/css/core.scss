@@ -2,9 +2,10 @@
 
 .#{$tag} {
   display: inline-flex;
-  padding: $tag-padding;
+  padding: 0 $tag-padding;
+  margin: $tag-margin;
   font-size: $tag-font-size;
-  line-height: 1;
+  line-height: $tag-font-line-height;
   border: $tag-border-width $tag-border-type $tag-border-color;
 
   &-radius {
@@ -15,11 +16,11 @@
     border-radius: $tag-border-round;
   }
 
-  &-sm {
-    padding: $tag-padding-sm;
-  }
+  // &-sm {
+  //   padding: $tag-padding-sm;
+  // }
 
-  &-lg {
-    padding: $tag-padding-lg;
-  }
+  // &-lg {
+  //   padding: $tag-padding-lg;
+  // }
 }
